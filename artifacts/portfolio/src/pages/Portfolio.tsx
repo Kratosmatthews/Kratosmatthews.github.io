@@ -169,7 +169,9 @@ export default function Portfolio() {
             {/* Outering FC */}
             <div className="border border-border bg-card p-6 space-y-6">
               <div className="flex items-start gap-4">
-                <img src="/outering-fc-logo.png" alt="Outering FC" className="w-16 h-16 object-contain grayscale opacity-80 mt-1" />
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 mt-1 p-1">
+                  <img src="/outering-fc-logo.png" alt="Outering FC" className="w-full h-full object-contain" />
+                </div>
                 <div className="flex-1">
                   <div className="text-xs opacity-50 tracking-wider mb-1">CLIENT://</div>
                   <h3 className="text-xl font-bold text-emerald-50 tracking-widest">OUTERING FC</h3>
@@ -218,7 +220,7 @@ export default function Portfolio() {
             {/* MK Creative Hub */}
             <div className="border border-border bg-card p-6 space-y-6">
               <div className="flex items-start gap-4">
-                <img src="/mk-creative-hub-logo.png" alt="MK Creative Hub" className="w-16 h-16 object-contain grayscale opacity-80 mt-1" />
+                <img src="/mk-creative-hub-logo.png" alt="MK Creative Hub" className="w-16 h-16 object-contain mt-1" />
                 <div className="flex-1">
                   <div className="text-xs opacity-50 tracking-wider mb-1">CLIENT://</div>
                   <h3 className="text-xl font-bold text-emerald-50 tracking-widest">MK CREATIVE HUB</h3>
