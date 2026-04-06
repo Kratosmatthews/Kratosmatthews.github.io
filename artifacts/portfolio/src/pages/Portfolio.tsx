@@ -268,7 +268,7 @@ export default function Portfolio() {
                 <div className="text-xs opacity-50 tracking-wider mb-1">KEY_ACHIEVEMENTS://</div>
                 <div className="space-y-1">
                   <div className="text-xs text-primary tracking-wider font-bold">STRATEGIC DESIGN & ORCHESTRATION</div>
-                  <p className="text-sm opacity-80 leading-relaxed">Spearheaded the visual identity and campaign strategy for International Women's Day, spotlighting the company's four female founders to drive brand authority and engagement.</p>
+                  <p className="text-sm opacity-80 leading-relaxed">Spearheaded the visual identity and campaign strategy for a campaign spotlighting 4 female founders to drive brand authority and engagement.</p>
                 </div>
                 <div className="space-y-1">
                   <div className="text-xs text-primary tracking-wider font-bold">VIRAL GROWTH & REACH</div>
