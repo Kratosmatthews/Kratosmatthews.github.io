@@ -77,11 +77,33 @@ const itemVariants = {
 
 export default function Portfolio() {
   const [showPhone, setShowPhone] = useState(false);
+  const [lightbox, setLightbox] = useState<string | null>(null);
   const outeringTenure = getTenure(2024, 7);
   const outeringMonths = getTotalMonths(2024, 7);
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground font-mono selection:bg-primary/30 selection:text-primary relative overflow-x-hidden p-4 md:p-8 lg:p-12 pb-24">
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 text-primary border border-primary/40 px-3 py-1 text-xs tracking-widest hover:bg-primary hover:text-background transition-all"
+          >
+            CLOSE ✕
+          </button>
+          <img
+            src={lightbox}
+            alt="Content preview"
+            className="max-w-full max-h-[90vh] object-contain border border-primary/20 shadow-2xl"
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
+
       {/* Scanline Grid Texture Overlay */}
       <div className="fixed inset-0 pointer-events-none opacity-5 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:32px_32px] z-50"></div>
       
@@ -372,12 +394,13 @@ export default function Portfolio() {
             <div className="text-xs opacity-50 tracking-wider">MK_CREATIVE_HUB // INSTAGRAM CONTENT — MARCH 2026</div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {["/mk-content-3.png", "/mk-content-1.png", "/mk-content-2.png"].map((src, i) => (
-                <div key={i} className="border border-border/40 bg-card overflow-hidden group relative">
+                <button key={i} onClick={() => setLightbox(src)} className="border border-border/40 bg-card overflow-hidden group relative text-left cursor-zoom-in w-full">
                   <img src={src} alt={`MK Creative Hub content ${i + 1}`} className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-card/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-card/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-1">
+                    <ExternalLink className="w-5 h-5 text-primary" />
                     <span className="text-xs text-primary tracking-wider">CONTENT DESIGN // CANVA</span>
                   </div>
-                </div>
+                </button>
               ))}
             </div>
           </div>
