@@ -238,6 +238,7 @@ export default function Portfolio() {
                     <span key={s} className="text-xs border border-primary/20 bg-primary/5 text-primary px-2 py-1 tracking-wide">{s}</span>
                   ))}
                   <span className="text-xs border border-border/40 text-muted-foreground px-2 py-1 tracking-wide">Platform: Instagram</span>
+                  <span className="text-xs border border-border/40 text-muted-foreground px-2 py-1 tracking-wide">Employment: Contract</span>
                 </div>
               </div>
 
@@ -304,7 +305,7 @@ export default function Portfolio() {
                   {["Casting Coordinator", "Character Development", "Social Media Marketing", "Campaign Production", "Recruiting"].map(s => (
                     <span key={s} className="text-xs border border-primary/20 bg-primary/5 text-primary px-2 py-1 tracking-wide">{s}</span>
                   ))}
-                  <span className="text-xs border border-border/40 text-muted-foreground px-2 py-1 tracking-wide">Employment: Full-time</span>
+                  <span className="text-xs border border-border/40 text-muted-foreground px-2 py-1 tracking-wide">Employment: Contract</span>
                 </div>
               </div>
 
