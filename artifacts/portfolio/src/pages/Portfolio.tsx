@@ -55,10 +55,9 @@ const capabilities = [
 ];
 
 const brandsData = [
-  { name: "Brand 1", type: "Industry" },
-  { name: "Brand 2", type: "Industry" },
-  { name: "Brand 3", type: "Industry" },
-  { name: "Brand 4", type: "Industry" },
+  { name: "MK Creative Hub", type: "Creative Agency" },
+  { name: "Outering FC", type: "Football Club" },
+  { name: "Safaricom PLC", type: "Telecom" },
 ];
 
 const identityInfo = [
