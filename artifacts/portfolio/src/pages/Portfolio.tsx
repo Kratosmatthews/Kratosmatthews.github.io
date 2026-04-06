@@ -14,7 +14,7 @@ import {
   YAxis,
 } from "recharts";
 import { motion } from "framer-motion";
-import { Terminal, Activity, Github, Globe, Briefcase, Clock, Database, ChevronRight } from "lucide-react";
+import { Terminal, Activity, Github, Globe, Briefcase, Clock, Database, ChevronRight, Linkedin, Building2 } from "lucide-react";
 import { useState } from "react";
 
 const kenyaData = [
@@ -52,6 +52,13 @@ const capabilities = [
   { name: "Data Visualization (Power BI)", val: 88 },
   { name: "Social Media Strategy", val: 98 },
   { name: "A/B Conversion Testing", val: 85 },
+];
+
+const brandsData = [
+  { name: "Brand 1", type: "Industry" },
+  { name: "Brand 2", type: "Industry" },
+  { name: "Brand 3", type: "Industry" },
+  { name: "Brand 4", type: "Industry" },
 ];
 
 const identityInfo = [
@@ -113,16 +120,28 @@ export default function Portfolio() {
                 &gt; OPERATING AT THE INTERSECTION OF DATA-DRIVEN STRATEGY AND CREATIVE CONTENT.
               </p>
             </div>
-            <a
-              href="https://github.com/Kratosmatthews"
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center gap-2 border border-primary/30 bg-primary/5 hover:bg-primary/20 px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]"
-              data-testid="link-github"
-            >
-              <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              <span>/GITHUB</span>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://github.com/Kratosmatthews"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center gap-2 border border-primary/30 bg-primary/5 hover:bg-primary/20 px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]"
+                data-testid="link-github"
+              >
+                <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span>/GITHUB</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/austin-abuoga-49447937b/"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center gap-2 border border-primary/30 bg-primary/5 hover:bg-primary/20 px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]"
+                data-testid="link-linkedin"
+              >
+                <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span>/LINKEDIN</span>
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
@@ -308,6 +327,39 @@ export default function Portfolio() {
                 </RadarChart>
               </ResponsiveContainer>
             </div>
+          </div>
+        </motion.section>
+
+        {/* Brands Section */}
+        <motion.section variants={itemVariants} className="space-y-6">
+          <div className="flex items-center gap-2 mb-6">
+            <Building2 className="w-5 h-5 text-primary" />
+            <h2 className="text-xl font-bold tracking-widest text-emerald-50">CLIENT_ROSTER</h2>
+          </div>
+          <p className="text-xs opacity-50 -mt-4 tracking-wider uppercase">Brands Trusted With Their Digital Presence</p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {brandsData.map((brand, i) => (
+              <motion.div
+                key={i}
+                className="border border-border/40 bg-card hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 p-5 flex flex-col items-center justify-center gap-2 group cursor-default"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+                data-testid={`card-brand-${i}`}
+              >
+                <div className="w-8 h-8 rounded-full border border-primary/30 bg-primary/10 flex items-center justify-center text-primary font-bold text-sm group-hover:bg-primary/20 transition-colors">
+                  {brand.name.charAt(0)}
+                </div>
+                <span className="text-xs font-semibold tracking-widest text-center text-emerald-100/80 group-hover:text-emerald-50 transition-colors uppercase">
+                  {brand.name}
+                </span>
+                {brand.type && (
+                  <span className="text-[9px] opacity-40 tracking-wider uppercase">{brand.type}</span>
+                )}
+              </motion.div>
+            ))}
           </div>
         </motion.section>
 
