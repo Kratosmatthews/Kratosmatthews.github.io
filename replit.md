@@ -2,7 +2,12 @@
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+pnpm workspace monorepo using TypeScript. Contains Austin Abuoga's portfolio web app and an API server.
+
+## Artifacts
+
+- **portfolio** (`artifacts/portfolio/`): React + Vite portfolio for Austin Abuoga. Terminal/hacker aesthetic with emerald green on near-black background. Monospaced font (JetBrains Mono). Features: animated header, KPI metrics, interactive hover-reveal campaign charts (Recharts AreaChart & BarChart), Skill DNA radar chart, capabilities progress bars, framer-motion animations. No backend needed — all data is hardcoded.
+- **api-server** (`artifacts/api-server/`): Express 5 backend, port auto-assigned. Currently only has a health check endpoint.
 
 ## Stack
 
@@ -15,6 +20,7 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **Validation**: Zod (`zod/v4`), `drizzle-zod`
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
+- **Frontend**: React + Vite, Tailwind CSS, Recharts, Framer Motion, Lucide React
 
 ## Key Commands
 
