@@ -8,7 +8,8 @@ import {
   Tooltip,
 } from "recharts";
 import { motion } from "framer-motion";
-import { Terminal, Activity, Github, Globe, Briefcase, Clock, Database, ChevronRight, Linkedin, Building2, Mail, Award, Wrench, ExternalLink, Calendar, Layers } from "lucide-react";
+import { Terminal, Activity, Github, Globe, Briefcase, Clock, Database, ChevronRight, Linkedin, Building2, Mail, Award, Wrench, ExternalLink, Calendar, Layers, Phone, MessageCircle } from "lucide-react";
+import { useState } from "react";
 
 const skillsData = [
   { subject: "SQL/Python", A: 95, fullMark: 100 },
@@ -60,6 +61,7 @@ const itemVariants = {
 };
 
 export default function Portfolio() {
+  const [showPhone, setShowPhone] = useState(false);
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground font-mono selection:bg-primary/30 selection:text-primary relative overflow-x-hidden p-4 md:p-8 lg:p-12 pb-24">
@@ -638,7 +640,7 @@ export default function Portfolio() {
                 Available for social media management, graphic design, content strategy, and data analytics contracts. Let's talk.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
               <a
                 href="mailto:Abuogaaustin@gmail.com"
                 className="flex items-center gap-2 border border-primary text-primary px-6 py-3 text-sm tracking-widest hover:bg-primary hover:text-background transition-all duration-200 font-bold"
@@ -646,6 +648,37 @@ export default function Portfolio() {
                 <Mail className="w-4 h-4" />
                 ABUOGAAUSTIN@GMAIL.COM
               </a>
+              <div className="relative">
+                <button
+                  onClick={() => setShowPhone(v => !v)}
+                  className="flex items-center gap-2 border border-border/40 text-muted-foreground px-6 py-3 text-sm tracking-widest hover:border-primary/40 hover:text-primary transition-all duration-200"
+                >
+                  <Phone className="w-4 h-4" />
+                  +254 799 867 387
+                </button>
+                {showPhone && (
+                  <div className="absolute top-full left-0 mt-1 w-full z-50 border border-primary/30 bg-card shadow-lg overflow-hidden">
+                    <a
+                      href="https://wa.me/254799867387"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setShowPhone(false)}
+                      className="flex items-center gap-3 px-4 py-3 text-xs tracking-wider text-emerald-400 hover:bg-primary/10 transition-colors border-b border-border/30"
+                    >
+                      <MessageCircle className="w-4 h-4 shrink-0" />
+                      CHAT ON WHATSAPP
+                    </a>
+                    <a
+                      href="tel:+254799867387"
+                      onClick={() => setShowPhone(false)}
+                      className="flex items-center gap-3 px-4 py-3 text-xs tracking-wider text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                    >
+                      <Phone className="w-4 h-4 shrink-0" />
+                      DIAL NUMBER
+                    </a>
+                  </div>
+                )}
+              </div>
               <a
                 href="https://www.linkedin.com/in/austin-abuoga"
                 target="_blank"
