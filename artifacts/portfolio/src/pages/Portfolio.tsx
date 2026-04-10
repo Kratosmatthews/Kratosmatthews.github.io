@@ -8,7 +8,7 @@ import {
   Tooltip,
 } from "recharts";
 import { motion } from "framer-motion";
-import { Terminal, Activity, Github, Globe, Briefcase, Clock, Database, ChevronRight, Linkedin, Building2, Mail, Award, Wrench, ExternalLink, Calendar, Layers, Phone, MessageCircle } from "lucide-react";
+import { Terminal, Activity, Github, Globe, Briefcase, Clock, Database, ChevronRight, Linkedin, Building2, Mail, Award, Wrench, ExternalLink, Calendar, Layers, Phone, MessageCircle, BarChart2 } from "lucide-react";
 import { useState } from "react";
 
 function getTenure(startYear: number, startMonth: number): string {
@@ -663,6 +663,106 @@ export default function Portfolio() {
                 )}
               </motion.div>
             ))}
+          </div>
+        </motion.section>
+
+        {/* Data Projects */}
+        <motion.section variants={itemVariants} className="space-y-6">
+          <div className="flex items-center gap-2 mb-6">
+            <BarChart2 className="w-5 h-5 text-primary" />
+            <h2 className="text-xl font-bold tracking-widest text-emerald-50">DATA_PROJECTS</h2>
+          </div>
+
+          <div className="border border-border/40 bg-card p-6 space-y-6">
+            {/* Project Header */}
+            <div className="space-y-3">
+              <div className="text-xs opacity-50 tracking-wider">PROJECT://</div>
+              <h3 className="text-lg font-bold text-emerald-50 tracking-widest">INSTAGRAM USER ANALYTICS DASHBOARD</h3>
+              <div className="flex flex-wrap gap-2">
+                {["PYTHON", "SQL", "POWER BI", "EXCEL"].map(t => (
+                  <span key={t} className="text-xs bg-primary/10 border border-primary/30 text-primary px-2 py-0.5 tracking-wide">{t}</span>
+                ))}
+                <span className="text-xs bg-card border border-border/40 text-muted-foreground px-2 py-0.5 tracking-wide">1.5M+ RECORDS</span>
+              </div>
+            </div>
+
+            {/* Objective */}
+            <div className="border-l-2 border-primary/40 pl-4">
+              <div className="text-xs opacity-50 tracking-wider mb-2">OBJECTIVE://</div>
+              <p className="text-sm opacity-80 leading-relaxed">
+                End-to-end analysis of engagement patterns and usage behaviours across 1.5M+ Instagram users, examining how demographic factors — age, gender, and occupation — correlate with platform activity. Built a full data pipeline from raw CSV ingestion through to an interactive Power BI dashboard.
+              </p>
+            </div>
+
+            {/* Pipeline */}
+            <div>
+              <div className="text-xs opacity-50 tracking-wider mb-3">PIPELINE://</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {[
+                  { tool: "PYTHON · PANDAS", detail: "Loaded and inner-merged two raw CSVs (1.5M+ rows) in VS Code — handled column deduplication and joined datasets on user_id using pandas merge(), then automated export to a production-ready CSV via .to_csv()" },
+                  { tool: "PYTHON · FEATURE ENGINEERING", detail: "Engineered 4 custom columns: engagement_score (weighted sum of daily likes, comments, and weekly posts), total_daily_minutes (feed + reels + explore time), usage_category (Low/Medium/High threshold binning), and age_group (5 demographic bands)" },
+                  { tool: "PYTHON · MATPLOTLIB", detail: "Generated a bar chart visualising average daily Instagram usage segmented by gender — styled with a professional colour palette for presentation-ready output" },
+                  { tool: "SQL · POSTGRESQL / DBEAVER", detail: "Imported cleaned data into PostgreSQL and executed GROUP BY queries in DBeaver to aggregate avg(daily_usage_time) by gender, avg(engagement) by age, and avg usage by occupation — surfacing behavioural differences across demographic cohorts" },
+                  { tool: "EXCEL · PIVOT TABLES", detail: "Performed initial exploratory data analysis on the raw dataset using Excel pivot tables — cross-tabulated usage metrics to validate trends before formalising transformations in Python" },
+                  { tool: "POWER BI · DASHBOARD", detail: "Built a multi-page interactive dashboard connected to the cleaned CSV, with slicers for gender, age group, and occupation — report pages cover engagement distribution, usage time patterns, and high-engagement user profiling" },
+                ].map(({ tool, detail }, i) => (
+                  <div key={i} className="flex gap-3 p-3 bg-background/40 border border-border/20">
+                    <ChevronRight className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                    <div>
+                      <div className="text-xs text-primary font-bold tracking-wider mb-1">{tool}</div>
+                      <div className="text-xs opacity-70 leading-relaxed">{detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Screenshots */}
+            <div>
+              <div className="text-xs opacity-50 tracking-wider mb-3">SCREENSHOTS://</div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                {[
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/instagram_analysis.py%20-%20instagram-analytics-project%20-%20Visual%20Studio%20Code%204_10_2026%203_05_41%20PM.png", label: "PYTHON · VS CODE" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Figure%201%204_10_2026%202_14_24%20PM.png", label: "MATPLOTLIB · CHART" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/instagram_cleaned_data.csv%20-%20Excel%204_10_2026%203_04_56%20PM.png", label: "EXCEL · CLEANED DATA" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/DBeaver%2026.0.1%20-%20_postgres_%20Script-10%204_7_2026%207_52_35%20PM.png", label: "SQL · DBEAVER" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_46_18%20PM.png", label: "POWER BI · 1" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_46_34%20PM.png", label: "POWER BI · 2" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_47_02%20PM.png", label: "POWER BI · 3" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_47_59%20PM.png", label: "POWER BI · 4" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_30_03%20PM.png", label: "POWER BI · 5" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_51_19%20PM.png", label: "POWER BI · 6" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_51_31%20PM.png", label: "POWER BI · 7" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_17_40%20PM.png", label: "POWER BI · 8" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_24_15%20PM.png", label: "POWER BI · 9" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_29_05%20PM.png", label: "POWER BI · 10" },
+                ].map(({ src, label }, i) => (
+                  <button key={i} onClick={() => setLightbox(src)} className="border border-border/40 bg-background/40 overflow-hidden group relative cursor-zoom-in w-full">
+                    <img src={src} alt={label} className="w-full h-28 object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-card/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-1">
+                      <ExternalLink className="w-4 h-4 text-primary" />
+                      <span className="text-xs text-primary tracking-wide">{label}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Links */}
+            <div className="flex flex-wrap gap-3 pt-2 border-t border-border/20">
+              <a href="https://github.com/Kratosmatthews/instagram-analytics-dashboard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
+                <Github className="w-3.5 h-3.5" /> GITHUB REPO
+              </a>
+              <a href="https://drive.google.com/drive/folders/1r-AjetcProhpRTlw5qY1HO5EjoTVzgRP?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
+                <ExternalLink className="w-3.5 h-3.5" /> POWER BI DASHBOARD
+              </a>
+              <a href="https://drive.google.com/drive/folders/1Qvk8JOwRBH91JX4RJbEric9rKomyddcC?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
+                <ExternalLink className="w-3.5 h-3.5" /> EXCEL ANALYSIS
+              </a>
+              <a href="https://www.kaggle.com/datasets/rockyt07/social-media-user-analysis" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
+                <ExternalLink className="w-3.5 h-3.5" /> RAW DATASET
+              </a>
+            </div>
           </div>
         </motion.section>
 
