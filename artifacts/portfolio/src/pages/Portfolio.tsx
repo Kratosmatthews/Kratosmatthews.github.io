@@ -117,6 +117,14 @@ const ALL_SCREENSHOTS: string[] = [
   "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_19_54%20PM.png",
   "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_05%20PM.png",
   "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_22%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/customer_segmentation.py%20-%20customer-segmentation-analysis%20-%20Visual%20Studio%20Code%204_11_2026%205_15_19%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/customer_segmentation.py%20-%20customer-segmentation-analysis%20-%20Visual%20Studio%20Code%204_11_2026%205_15_36%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/customer_segments.csv%20-%20Excel%204_12_2026%2012_11_44%20AM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Figure%201%204_11_2026%205_13_25%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_38_47%20AM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_51_04%20AM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_48_13%20AM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_48_20%20AM.png",
 ];
 
 export default function Portfolio() {
@@ -1002,6 +1010,101 @@ export default function Portfolio() {
               </a>
               <a href="https://www.kaggle.com/datasets/fatihilhan/global-superstore-dataset" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
                 <ExternalLink className="w-3.5 h-3.5" /> RAW DATASET
+              </a>
+            </div>
+          </div>
+
+          {/* Project 3: Customer Segmentation Analysis */}
+          <div className="border border-border/40 bg-card p-6 space-y-6">
+            <div className="space-y-3">
+              <div className="text-xs opacity-50 tracking-wider">PROJECT://</div>
+              <h3 className="text-lg font-bold text-emerald-50 tracking-widest">CUSTOMER SEGMENTATION ANALYSIS</h3>
+              <div className="flex flex-wrap gap-2">
+                {["PYTHON", "SQL", "POWER BI", "EXCEL"].map(t => (
+                  <span key={t} className="text-xs bg-primary/10 border border-primary/30 text-primary px-2 py-0.5 tracking-wide">{t}</span>
+                ))}
+                <span className="text-xs bg-card border border-border/40 text-muted-foreground px-2 py-0.5 tracking-wide">10K CUSTOMERS</span>
+              </div>
+            </div>
+
+            <div className="border-l-2 border-primary/40 pl-4">
+              <div className="text-xs opacity-50 tracking-wider mb-2">OBJECTIVE://</div>
+              <p className="text-sm opacity-80 leading-relaxed">
+                End-to-end customer segmentation pipeline classifying 10,000 customers into four behavioural tiers — Low, Medium, High, and VIP — based on total spend using quantile-based segmentation. Built a full data pipeline from raw transaction data through to a 3-page Power BI dashboard surfacing spending patterns, order frequency, and top customers.
+              </p>
+            </div>
+
+            <div>
+              <div className="text-xs opacity-50 tracking-wider mb-2">KEY_FINDINGS://</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+                {[
+                  { label: "TOTAL CUSTOMERS", value: "10,000 across 4 segments" },
+                  { label: "AVERAGE SPEND", value: "$1,110 per customer" },
+                  { label: "VIP CUSTOMERS", value: "2,500 — highest spend & frequency" },
+                  { label: "VIP TOTAL SPEND", value: "approx. $5M (highest segment)" },
+                  { label: "SEGMENTATION METHOD", value: "Quantile-based (qcut, q=4)" },
+                  { label: "SPEND DISTRIBUTION", value: "Right-skewed — majority $500–$1,500, tail to $4K" },
+                ].map(({ label, value }, i) => (
+                  <div key={i} className="flex gap-3 p-3 bg-background/40 border border-border/20">
+                    <ChevronRight className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                    <div>
+                      <div className="text-xs text-primary font-bold tracking-wider mb-1">{label}</div>
+                      <div className="text-xs opacity-70 leading-relaxed">{value}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="text-xs opacity-50 tracking-wider mb-3">PIPELINE://</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {[
+                  { tool: "PYTHON · PANDAS", detail: "Loaded Customer_Transactions.csv, removed duplicates and nulls, converted last_purchase_date to datetime, and exported segmented data to CSV" },
+                  { tool: "PYTHON · FEATURE ENGINEERING", detail: "Engineered Total Spend = num_purchases × avg_purchase_value, then applied quantile segmentation (qcut, q=4) to classify customers into Low / Medium / High / VIP tiers" },
+                  { tool: "PYTHON · MATPLOTLIB / SEABORN", detail: "Generated two visualisations: Customer Segment Distribution (bar chart, equal 2,500 per tier) and Spending Distribution (histogram showing right-skewed pattern from $0 to $4K)" },
+                  { tool: "EXCEL · SEGMENT REVIEW", detail: "Reviewed cleaned customer_segments.csv output in Excel to validate segment assignments and spending ranges before loading into Power BI" },
+                  { tool: "SQL · POSTGRESQL / DBEAVER", detail: "Imported segmented data into PostgreSQL and ran GROUP BY aggregation queries to compute total spend, order frequency, and customer count per segment" },
+                  { tool: "POWER BI · 3-PAGE DASHBOARD", detail: "Overview (10K customers, $1.11K avg spend, 2,500 VIP), Segmentation Dashboard (customers/spend/frequency per segment), Top Customers (ranked by total spend)" },
+                ].map(({ tool, detail }, i) => (
+                  <div key={i} className="flex gap-3 p-3 bg-background/40 border border-border/20">
+                    <ChevronRight className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                    <div>
+                      <div className="text-xs text-primary font-bold tracking-wider mb-1">{tool}</div>
+                      <div className="text-xs opacity-70 leading-relaxed">{detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="text-xs opacity-50 tracking-wider mb-3">SCREENSHOTS://</div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                {[
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/customer_segmentation.py%20-%20customer-segmentation-analysis%20-%20Visual%20Studio%20Code%204_11_2026%205_15_19%20PM.png", label: "PYTHON · VS CODE 1" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/customer_segmentation.py%20-%20customer-segmentation-analysis%20-%20Visual%20Studio%20Code%204_11_2026%205_15_36%20PM.png", label: "PYTHON · VS CODE 2" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/customer_segments.csv%20-%20Excel%204_12_2026%2012_11_44%20AM.png", label: "EXCEL · SEGMENTS" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Figure%201%204_11_2026%205_13_25%20PM.png", label: "MATPLOTLIB · CHARTS" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_38_47%20AM.png", label: "POWER BI · OVERVIEW" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_51_04%20AM.png", label: "POWER BI · SEGMENTS" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_48_13%20AM.png", label: "POWER BI · TOP CUSTOMERS" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_48_20%20AM.png", label: "POWER BI · CUSTOMERS DRILL" },
+                ].map(({ src, label }, i) => (
+                  <button key={i} onClick={() => setLightbox(src)} className="border border-border/40 bg-background/40 overflow-hidden group relative cursor-zoom-in w-full">
+                    <img src={src} alt={label} className="w-full h-28 object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-card/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-1">
+                      <ExternalLink className="w-4 h-4 text-primary" />
+                      <span className="text-xs text-primary tracking-wide">{label}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3 pt-2 border-t border-border/20">
+              <a href="https://github.com/Kratosmatthews/customer-segmentation-analysis" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
+                <Github className="w-3.5 h-3.5" /> GITHUB REPO
               </a>
             </div>
           </div>
