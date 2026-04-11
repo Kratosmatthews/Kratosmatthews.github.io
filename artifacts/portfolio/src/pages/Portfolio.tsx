@@ -1106,6 +1106,9 @@ export default function Portfolio() {
               <a href="https://github.com/Kratosmatthews/customer-segmentation-analysis" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
                 <Github className="w-3.5 h-3.5" /> GITHUB REPO
               </a>
+              <a href="https://www.kaggle.com/datasets/fares279/customers-transactions" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
+                <ExternalLink className="w-3.5 h-3.5" /> RAW DATASET
+              </a>
             </div>
           </div>
         </motion.section>
