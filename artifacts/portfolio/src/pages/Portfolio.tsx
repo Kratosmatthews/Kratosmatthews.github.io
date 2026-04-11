@@ -88,6 +88,37 @@ const NAV_ITEMS = [
     { id: 'contact', label: 'CONTACT' },
 ];
 
+const ALL_SCREENSHOTS: string[] = [
+  "/mk-content-3.png",
+  "/mk-content-1.png",
+  "/mk-content-2.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/instagram_analysis.py%20-%20instagram-analytics-project%20-%20Visual%20Studio%20Code%204_10_2026%203_05_41%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Figure%201%204_10_2026%202_14_24%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/instagram_cleaned_data.csv%20-%20Excel%204_10_2026%203_04_56%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/DBeaver%2026.0.1%20-%20_postgres_%20Script-10%204_7_2026%207_52_35%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_46_18%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_46_34%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_47_02%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_47_59%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_30_03%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_51_19%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_51_31%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_17_40%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_24_15%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_29_05%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/sales_analysis.py%20-%20sales%20revenue%20dashboard%20-%20Visual%20Studio%20Code%204_11_2026%201_32_12%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/cleaned_sales_data.csv%20-%20Excel%204_11_2026%201_42_14%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/sales_summary.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%201_58_36%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_04_01%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_04_23%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_08_20%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_08_56%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_19_54%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_05%20PM.png",
+  "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_22%20PM.png",
+];
+
 export default function Portfolio() {
   const [showPhone, setShowPhone] = useState(false);
   const [lightbox, setLightbox] = useState<string | null>(null);
@@ -117,6 +148,22 @@ export default function Portfolio() {
     return () => observers.forEach(o => o.disconnect());
   }, []);
 
+  const lightboxIndex = lightbox ? ALL_SCREENSHOTS.indexOf(lightbox) : -1;
+  const hasPrev = lightboxIndex > 0;
+  const hasNext = lightboxIndex >= 0 && lightboxIndex < ALL_SCREENSHOTS.length - 1;
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const idx = ALL_SCREENSHOTS.indexOf(lightbox);
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight' && idx < ALL_SCREENSHOTS.length - 1) setLightbox(ALL_SCREENSHOTS[idx + 1]);
+      if (e.key === 'ArrowLeft' && idx > 0) setLightbox(ALL_SCREENSHOTS[idx - 1]);
+      if (e.key === 'Escape') setLightbox(null);
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [lightbox]);
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
@@ -129,12 +176,43 @@ export default function Portfolio() {
           className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
           onClick={() => setLightbox(null)}
         >
+          {/* Close */}
           <button
             onClick={() => setLightbox(null)}
             className="absolute top-4 right-4 text-primary border border-primary/40 px-3 py-1 text-xs tracking-widest hover:bg-primary hover:text-background transition-all"
           >
             CLOSE ✕
           </button>
+
+          {/* Counter */}
+          {lightboxIndex >= 0 && (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 text-xs text-primary/60 tracking-widest font-mono">
+              {lightboxIndex + 1} / {ALL_SCREENSHOTS.length}
+            </div>
+          )}
+
+          {/* Prev arrow */}
+          {hasPrev && (
+            <button
+              onClick={e => { e.stopPropagation(); setLightbox(ALL_SCREENSHOTS[lightboxIndex - 1]); }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-primary border border-primary/40 w-10 h-10 flex items-center justify-center hover:bg-primary hover:text-background transition-all text-lg"
+              aria-label="Previous"
+            >
+              ‹
+            </button>
+          )}
+
+          {/* Next arrow */}
+          {hasNext && (
+            <button
+              onClick={e => { e.stopPropagation(); setLightbox(ALL_SCREENSHOTS[lightboxIndex + 1]); }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-primary border border-primary/40 w-10 h-10 flex items-center justify-center hover:bg-primary hover:text-background transition-all text-lg"
+              aria-label="Next"
+            >
+              ›
+            </button>
+          )}
+
           <img
             src={lightbox}
             alt="Content preview"
