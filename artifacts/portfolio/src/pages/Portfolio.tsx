@@ -826,6 +826,107 @@ export default function Portfolio() {
               </a>
             </div>
           </div>
+
+          {/* Project 2: Sales Revenue Dashboard */}
+          <div className="border border-border/40 bg-card p-6 space-y-6">
+            <div className="space-y-3">
+              <div className="text-xs opacity-50 tracking-wider">PROJECT://</div>
+              <h3 className="text-lg font-bold text-emerald-50 tracking-widest">SALES REVENUE DASHBOARD</h3>
+              <div className="flex flex-wrap gap-2">
+                {["PYTHON", "SQL", "POWER BI", "EXCEL"].map(t => (
+                  <span key={t} className="text-xs bg-primary/10 border border-primary/30 text-primary px-2 py-0.5 tracking-wide">{t}</span>
+                ))}
+                <span className="text-xs bg-card border border-border/40 text-muted-foreground px-2 py-0.5 tracking-wide">51,291 RECORDS</span>
+              </div>
+            </div>
+
+            <div className="border-l-2 border-primary/40 pl-4">
+              <div className="text-xs opacity-50 tracking-wider mb-2">OBJECTIVE://</div>
+              <p className="text-sm opacity-80 leading-relaxed">
+                End-to-end sales analysis pipeline built on the Global Superstore dataset — examining which products generate the most revenue, which regions perform best, which months have the highest sales, and who the top customers are. Built a full data pipeline from raw CSV ingestion through to a 3-page interactive Power BI dashboard covering $13M in total revenue across 4,873 customers.
+              </p>
+            </div>
+
+            <div>
+              <div className="text-xs opacity-50 tracking-wider mb-2">KEY_FINDINGS://</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+                {[
+                  { label: "TOP PRODUCT", value: "Apple Smart Phone, Full Size" },
+                  { label: "TOP REGION", value: "Central — ~$2.75M" },
+                  { label: "PEAK MONTH", value: "December — ~$1.58M" },
+                  { label: "TOP CUSTOMER", value: "Tom Ashbrook" },
+                  { label: "TOTAL REVENUE", value: "$13M across 25K orders" },
+                  { label: "LARGEST SEGMENT", value: "Consumer — 51.48% ($7M)" },
+                ].map(({ label, value }, i) => (
+                  <div key={i} className="flex gap-3 p-3 bg-background/40 border border-border/20">
+                    <ChevronRight className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                    <div>
+                      <div className="text-xs text-primary font-bold tracking-wider mb-1">{label}</div>
+                      <div className="text-xs opacity-70 leading-relaxed">{value}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="text-xs opacity-50 tracking-wider mb-3">PIPELINE://</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {[
+                  { tool: "PYTHON · PANDAS", detail: "Loaded raw Superstore CSV (51,291 rows), removed duplicates and nulls, converted Order.Date to datetime, and exported cleaned data to CSV" },
+                  { tool: "PYTHON · FEATURE ENGINEERING", detail: "Engineered Year, Month, Month_Name, and Season columns (Winter/Spring/Summer/Fall) to enable time-based and seasonal analysis" },
+                  { tool: "PYTHON · MATPLOTLIB / SEABORN", detail: "Generated summary visualisations: monthly revenue trend (line chart) and total revenue by region (bar chart) using the fivethirtyeight style" },
+                  { tool: "SQL · POSTGRESQL / DBEAVER", detail: "Imported cleaned data into PostgreSQL and ran GROUP BY aggregation queries to compute total revenue by region, product, and customer segment" },
+                  { tool: "EXCEL · PIVOT TABLES", detail: "Performed initial EDA on the raw dataset — cross-tabulated revenue by region, product category, and month to validate early trends before formalising in Python" },
+                  { tool: "POWER BI · 3-PAGE DASHBOARD", detail: "Overview Dashboard (KPI cards: $13M revenue, 25K orders, 4,873 customers), Sales Performance (product/month/region charts), Customer Insights (top customers + segment pie chart)" },
+                ].map(({ tool, detail }, i) => (
+                  <div key={i} className="flex gap-3 p-3 bg-background/40 border border-border/20">
+                    <ChevronRight className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                    <div>
+                      <div className="text-xs text-primary font-bold tracking-wider mb-1">{tool}</div>
+                      <div className="text-xs opacity-70 leading-relaxed">{detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="text-xs opacity-50 tracking-wider mb-3">SCREENSHOTS://</div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                {[
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/sales_analysis.py%20-%20sales%20revenue%20dashboard%20-%20Visual%20Studio%20Code%204_11_2026%201_32_12%20PM.png", label: "PYTHON · VS CODE" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/cleaned_sales_data.csv%20-%20Excel%204_11_2026%201_42_14%20PM.png", label: "EXCEL · CLEANED DATA" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/sales_summary.png", label: "MATPLOTLIB · CHARTS" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%201_58_36%20PM.png", label: "POWER BI · OVERVIEW" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_04_01%20PM.png", label: "POWER BI · REVENUE/MONTH" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_04_23%20PM.png", label: "POWER BI · REVENUE/REGION" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_08_20%20PM.png", label: "POWER BI · SALES PERF" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_08_56%20PM.png", label: "POWER BI · TOP PRODUCTS" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_19_54%20PM.png", label: "POWER BI · SEGMENTS" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_05%20PM.png", label: "POWER BI · CUSTOMERS" },
+                  { src: "https://raw.githubusercontent.com/Kratosmatthews/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_22%20PM.png", label: "POWER BI · INSIGHTS" },
+                ].map(({ src, label }, i) => (
+                  <button key={i} onClick={() => setLightbox(src)} className="border border-border/40 bg-background/40 overflow-hidden group relative cursor-zoom-in w-full">
+                    <img src={src} alt={label} className="w-full h-28 object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-card/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-1">
+                      <ExternalLink className="w-4 h-4 text-primary" />
+                      <span className="text-xs text-primary tracking-wide">{label}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3 pt-2 border-t border-border/20">
+              <a href="https://github.com/Kratosmatthews/sales-revenue-dashboard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
+                <Github className="w-3.5 h-3.5" /> GITHUB REPO
+              </a>
+              <a href="https://www.kaggle.com/datasets/fatihilhan/global-superstore-dataset" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
+                <ExternalLink className="w-3.5 h-3.5" /> RAW DATASET
+              </a>
+            </div>
+          </div>
         </motion.section>
 
         {/* Contact */}
