@@ -6,7 +6,7 @@ if [ -z "$AUSTINABUOGA_PORTFOLIO_KEY" ]; then
   exit 1
 fi
 
-REPO="https://austin-abuoga:${AUSTINABUOGA_PORTFOLIO_KEY}@github.com/austin-abuoga/austinabuoga.github.io.git"
+REPO="https://austinabuoga:${AUSTINABUOGA_PORTFOLIO_KEY}@github.com/austinabuoga/austinabuoga.github.io.git"
 
 git remote set-url origin "$REPO"
 

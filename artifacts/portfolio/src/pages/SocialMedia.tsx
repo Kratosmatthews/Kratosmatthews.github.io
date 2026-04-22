@@ -170,7 +170,7 @@ export default function SocialMedia() {
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="https://www.linkedin.com/in/austin-abuoga-49447937b/"
+                href="https://www.linkedin.com/in/austinabuoga-49447937b/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors"
@@ -653,10 +653,10 @@ export default function SocialMedia() {
               </button>
             </div>
             <div className="flex items-center justify-center gap-4 mt-8">
-              <a href="https://github.com/austin-abuoga" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-rose-400 transition-colors">
+              <a href="https://github.com/austinabuoga" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-rose-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/austin-abuoga-49447937b/" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-rose-400 transition-colors">
+              <a href="https://www.linkedin.com/in/austinabuoga-49447937b/" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-rose-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>

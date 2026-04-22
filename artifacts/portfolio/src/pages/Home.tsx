@@ -11,10 +11,10 @@ export default function Home() {
       <header className="px-8 py-6 flex items-center justify-between border-b border-white/5">
         <div className="text-sm font-semibold tracking-widest text-white/60 uppercase">Austin Abuoga</div>
         <div className="flex items-center gap-4">
-          <a href="https://github.com/austin-abuoga" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors">
+          <a href="https://github.com/austinabuoga" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors">
             <Github className="w-4 h-4" />
           </a>
-          <a href="https://www.linkedin.com/in/austin-abuoga-49447937b/" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/austinabuoga-49447937b/" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors">
             <Linkedin className="w-4 h-4" />
           </a>
           <a href="mailto:Abuogaaustin@gmail.com" className="text-white/40 hover:text-white transition-colors">

@@ -49,39 +49,39 @@ const itemVariants = {
 };
 
 const ALL_SCREENSHOTS: string[] = [
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/instagram_analysis.py%20-%20instagram-analytics-project%20-%20Visual%20Studio%20Code%204_10_2026%203_05_41%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Figure%201%204_10_2026%202_14_24%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/instagram_cleaned_data.csv%20-%20Excel%204_10_2026%203_04_56%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/DBeaver%2026.0.1%20-%20_postgres_%20Script-10%204_7_2026%207_52_35%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_46_18%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_46_34%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_47_02%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_47_59%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_30_03%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_51_19%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_51_31%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_17_40%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_24_15%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_29_05%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/sales_analysis.py%20-%20sales%20revenue%20dashboard%20-%20Visual%20Studio%20Code%204_11_2026%201_32_12%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/cleaned_sales_data.csv%20-%20Excel%204_11_2026%201_42_14%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/sales_summary.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%201_58_36%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_04_01%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_04_23%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_08_20%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_08_56%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_19_54%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_05%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_22%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/customer-segmentation-analysis/main/images/customer_segmentation.py%20-%20customer-segmentation-analysis%20-%20Visual%20Studio%20Code%204_11_2026%205_15_19%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/customer-segmentation-analysis/main/images/customer_segmentation.py%20-%20customer-segmentation-analysis%20-%20Visual%20Studio%20Code%204_11_2026%205_15_36%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/customer-segmentation-analysis/main/images/customer_segments.csv%20-%20Excel%204_12_2026%2012_11_44%20AM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/customer-segmentation-analysis/main/images/Figure%201%204_11_2026%205_13_25%20PM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_38_47%20AM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_51_04%20AM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_48_13%20AM.png",
-  "https://raw.githubusercontent.com/austin-abuoga/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_48_20%20AM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/instagram_analysis.py%20-%20instagram-analytics-project%20-%20Visual%20Studio%20Code%204_10_2026%203_05_41%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Figure%201%204_10_2026%202_14_24%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/instagram_cleaned_data.csv%20-%20Excel%204_10_2026%203_04_56%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/DBeaver%2026.0.1%20-%20_postgres_%20Script-10%204_7_2026%207_52_35%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_46_18%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_46_34%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_47_02%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%203_47_59%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_30_03%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_51_19%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%204_51_31%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_17_40%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_24_15%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/instagram-analytics-dashboard/main/instagram-analytics-project/images/Power%20BI%20Desktop%204_10_2026%205_29_05%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/sales_analysis.py%20-%20sales%20revenue%20dashboard%20-%20Visual%20Studio%20Code%204_11_2026%201_32_12%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/cleaned_sales_data.csv%20-%20Excel%204_11_2026%201_42_14%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/sales_summary.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%201_58_36%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_04_01%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_04_23%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_08_20%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_08_56%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_19_54%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_05%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/sales-revenue-dashboard/main/images/Power%20BI%20Desktop%204_11_2026%202_20_22%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/customer-segmentation-analysis/main/images/customer_segmentation.py%20-%20customer-segmentation-analysis%20-%20Visual%20Studio%20Code%204_11_2026%205_15_19%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/customer-segmentation-analysis/main/images/customer_segmentation.py%20-%20customer-segmentation-analysis%20-%20Visual%20Studio%20Code%204_11_2026%205_15_36%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/customer-segmentation-analysis/main/images/customer_segments.csv%20-%20Excel%204_12_2026%2012_11_44%20AM.png",
+  "https://raw.githubusercontent.com/austinabuoga/customer-segmentation-analysis/main/images/Figure%201%204_11_2026%205_13_25%20PM.png",
+  "https://raw.githubusercontent.com/austinabuoga/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_38_47%20AM.png",
+  "https://raw.githubusercontent.com/austinabuoga/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_51_04%20AM.png",
+  "https://raw.githubusercontent.com/austinabuoga/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_48_13%20AM.png",
+  "https://raw.githubusercontent.com/austinabuoga/customer-segmentation-analysis/main/images/Power%20BI%20Desktop%204_12_2026%2012_48_20%20AM.png",
 ];
 
 const NAV_ITEMS = [
@@ -228,11 +228,11 @@ export default function DataAnalysis() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="https://github.com/austin-abuoga" target="_blank" rel="noreferrer" className="group flex items-center gap-2 border border-primary/30 bg-primary/5 hover:bg-primary/20 px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]">
+              <a href="https://github.com/austinabuoga" target="_blank" rel="noreferrer" className="group flex items-center gap-2 border border-primary/30 bg-primary/5 hover:bg-primary/20 px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]">
                 <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span>/GITHUB</span>
               </a>
-              <a href="https://www.linkedin.com/in/austin-abuoga-49447937b/" target="_blank" rel="noreferrer" className="group flex items-center gap-2 border border-primary/30 bg-primary/5 hover:bg-primary/20 px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]">
+              <a href="https://www.linkedin.com/in/austinabuoga-49447937b/" target="_blank" rel="noreferrer" className="group flex items-center gap-2 border border-primary/30 bg-primary/5 hover:bg-primary/20 px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]">
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span>/LINKEDIN</span>
               </a>
@@ -360,7 +360,7 @@ export default function DataAnalysis() {
               </div>
             </div>
             <div className="flex flex-wrap gap-3 pt-2 border-t border-border/20">
-              <a href="https://github.com/austin-abuoga/instagram-analytics-dashboard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
+              <a href="https://github.com/austinabuoga/instagram-analytics-dashboard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
                 <Github className="w-3.5 h-3.5" /> GITHUB REPO
               </a>
               <a href="https://drive.google.com/drive/folders/1r-AjetcProhpRTlw5qY1HO5EjoTVzgRP?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
@@ -462,7 +462,7 @@ export default function DataAnalysis() {
               </div>
             </div>
             <div className="flex flex-wrap gap-3 pt-2 border-t border-border/20">
-              <a href="https://github.com/austin-abuoga/sales-revenue-dashboard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
+              <a href="https://github.com/austinabuoga/sales-revenue-dashboard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
                 <Github className="w-3.5 h-3.5" /> GITHUB REPO
               </a>
               <a href="https://www.kaggle.com/datasets/fatihilhan/global-superstore-dataset" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
@@ -555,7 +555,7 @@ export default function DataAnalysis() {
               </div>
             </div>
             <div className="flex flex-wrap gap-3 pt-2 border-t border-border/20">
-              <a href="https://github.com/austin-abuoga/customer-segmentation-analysis" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
+              <a href="https://github.com/austinabuoga/customer-segmentation-analysis" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-primary/40 text-primary px-4 py-2 tracking-widest hover:bg-primary hover:text-background transition-all font-bold">
                 <Github className="w-3.5 h-3.5" /> GITHUB REPO
               </a>
               <a href="https://www.kaggle.com/datasets/fares279/customers-transactions" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs border border-border/40 text-muted-foreground px-4 py-2 tracking-widest hover:border-primary/40 hover:text-primary transition-all">
@@ -715,11 +715,11 @@ export default function DataAnalysis() {
                   </div>
                 )}
               </div>
-              <a href="https://www.linkedin.com/in/austin-abuoga-49447937b/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border border-border/40 text-muted-foreground px-6 py-3 text-sm tracking-widest hover:border-primary/40 hover:text-primary transition-all duration-200">
+              <a href="https://www.linkedin.com/in/austinabuoga-49447937b/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border border-border/40 text-muted-foreground px-6 py-3 text-sm tracking-widest hover:border-primary/40 hover:text-primary transition-all duration-200">
                 <Linkedin className="w-4 h-4" />
                 LINKEDIN
               </a>
-              <a href="https://github.com/austin-abuoga" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border border-border/40 text-muted-foreground px-6 py-3 text-sm tracking-widest hover:border-primary/40 hover:text-primary transition-all duration-200">
+              <a href="https://github.com/austinabuoga" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border border-border/40 text-muted-foreground px-6 py-3 text-sm tracking-widest hover:border-primary/40 hover:text-primary transition-all duration-200">
                 <Github className="w-4 h-4" />
                 GITHUB
               </a>
