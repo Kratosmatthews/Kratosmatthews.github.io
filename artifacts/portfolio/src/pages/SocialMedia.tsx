@@ -283,7 +283,7 @@ export default function SocialMedia() {
                 href="mailto:Abuogaaustin@gmail.com"
                 className="inline-flex items-center gap-2 border border-white/20 hover:border-rose-400 text-white/70 hover:text-white text-sm font-medium px-6 py-3 rounded-xl transition-all"
               >
-                <Mail className="w-4 h-4" /> Get in touch
+                <Mail className="w-4 h-4" /> Abuogaaustin@gmail.com
               </a>
             </div>
           </motion.div>
