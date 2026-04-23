@@ -757,13 +757,23 @@ export default function SocialMedia() {
               >
                 <Mail className="w-4 h-4" /> Abuogaaustin@gmail.com
               </a>
-              <button
-                onClick={() => setShowPhone(!showPhone)}
-                className="inline-flex items-center gap-2 border border-white/20 hover:border-rose-400 text-white/60 hover:text-white text-sm font-medium px-7 py-3.5 rounded-xl transition-all w-full sm:w-auto justify-center"
-              >
-                <Phone className="w-4 h-4" />
-                {showPhone ? "+254 799 867 387" : "Show phone number"}
-              </button>
+              {showPhone ? (
+                <a
+                  href="tel:+254799867387"
+                  className="inline-flex items-center gap-2 border border-rose-400/50 text-white text-sm font-medium px-7 py-3.5 rounded-xl transition-all hover:bg-rose-500/10 w-full sm:w-auto justify-center"
+                >
+                  <Phone className="w-4 h-4 text-rose-400" />
+                  +254 799 867 387
+                </a>
+              ) : (
+                <button
+                  onClick={() => setShowPhone(true)}
+                  className="inline-flex items-center gap-2 border border-white/20 hover:border-rose-400 text-white/60 hover:text-white text-sm font-medium px-7 py-3.5 rounded-xl transition-all w-full sm:w-auto justify-center"
+                >
+                  <Phone className="w-4 h-4" />
+                  Show phone number
+                </button>
+              )}
               <div className="inline-flex items-center gap-2 border border-white/10 text-white/40 text-sm font-medium px-7 py-3.5 rounded-xl w-full sm:w-auto justify-center select-none">
                 <FileText className="w-4 h-4" />
                 References · Provided upon request
