@@ -76,7 +76,7 @@ export default function Home() {
               onMouseOver={e => (e.currentTarget.style.boxShadow = "0 0 14px 2px rgba(244,63,94,0.35)")}
               onMouseOut={e => (e.currentTarget.style.boxShadow = "0 0 0 0 rgba(244,63,94,0)")}
             >
-              <span className="w-1 h-1 rounded-full bg-rose-500/40 group-hover:bg-rose-400 transition-colors" />
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-500/50 group-hover:bg-rose-400 transition-colors animate-pulse" />
               01 / Social Media
             </span>
             <h2 className="mt-4 text-[clamp(1.6rem,3.5vw,2.6rem)] font-black text-white leading-[1.0] tracking-tight">
@@ -107,7 +107,7 @@ export default function Home() {
               onMouseOver={e => (e.currentTarget.style.boxShadow = "0 0 14px 2px rgba(245,158,11,0.35)")}
               onMouseOut={e => (e.currentTarget.style.boxShadow = "0 0 0 0 rgba(245,158,11,0)")}
             >
-              <span className="w-1 h-1 rounded-full bg-amber-500/40 group-hover:bg-amber-400 transition-colors" />
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500/50 group-hover:bg-amber-400 transition-colors animate-pulse" />
               02 / Data Analysis
             </span>
             <h2 className="mt-4 text-[clamp(1.6rem,3.5vw,2.6rem)] font-black text-white leading-[1.0] tracking-tight">
