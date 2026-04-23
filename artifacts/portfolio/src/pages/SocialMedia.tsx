@@ -764,6 +764,10 @@ export default function SocialMedia() {
                 <Phone className="w-4 h-4" />
                 {showPhone ? "+254 799 867 387" : "Show phone number"}
               </button>
+              <div className="inline-flex items-center gap-2 border border-white/10 text-white/40 text-sm font-medium px-7 py-3.5 rounded-xl w-full sm:w-auto justify-center select-none">
+                <FileText className="w-4 h-4" />
+                References · Provided upon request
+              </div>
             </div>
             <div className="flex items-center justify-center gap-5 mt-10">
               <a href="https://github.com/austinabuoga" target="_blank" rel="noreferrer" className="text-white/20 hover:text-rose-400 transition-colors">

@@ -730,6 +730,10 @@ export default function DataAnalysis() {
                 <Github className="w-4 h-4" />
                 GITHUB
               </a>
+              <div className="flex items-center gap-2 border border-border/20 text-muted-foreground/50 px-6 py-3 text-sm tracking-widest select-none">
+                <Award className="w-4 h-4" />
+                REFERENCES // PROVIDED_ON_REQUEST
+              </div>
             </div>
             <div className="text-xs opacity-30 tracking-wider pt-2">RESPONSE_TIME: &lt; 24H</div>
           </div>
